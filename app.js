@@ -1,3 +1,7 @@
+/** module.paths.push('/usr/local/lib/node_modules');
+
+*/
+
 'use strict'
 
 require('dotenv').config({silent: true});
@@ -18,7 +22,7 @@ var controller = TwilioSMSBot({
 
 let bot = controller.spawn({})
 
-controller.setupWebserver('8000', function (err, webserver) {
+controller.setupWebserver('8080', function (err, webserver) {
   if (err) console.log(err)
   controller.createWebhookEndpoints(controller.webserver, bot, function () {
     console.log('TwilioSMSBot is online!');
