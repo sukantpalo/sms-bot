@@ -1,0 +1,6 @@
+applications:
+- name: watsonsmsbot
+  command: npm start
+  path: .
+  memory: 4096M
+  instances: 2
